@@ -1,12 +1,11 @@
-console.log("hellow world");
-console.log("こんにちは");
-console.log("gm");
+async function myFunction(){
+    const provider = await new ethers.providers.Web3Provider(window.ethereum)
+    await provider.getBlockNumber();
+    const signer = await provider.getSigner();
+    alert(signer.getAddress());
+}
 
-const provider = new ethers.providers.Web3Provider(window.ethereum)
-
-provider.send("eth_requestAccounts", []);
-
-const signer = provider.getSigner()
-
- a = provider.getBlockNumber();
- console.log(a);
+window.onload = ()=>{
+    myFunction();
+}
+ 
