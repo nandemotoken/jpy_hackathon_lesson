@@ -11,7 +11,7 @@ async function myFunction2(){
     alert(addresses[0]);
 }
 
-window.onload = ()=>{
+window.onload = function {
     myFunction();
     myFunction2();
 }
