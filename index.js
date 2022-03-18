@@ -4,8 +4,8 @@ async function myFunction(){
     alert(blocknumber);
     await ethereum.request({ method: 'eth_requestAccounts' });
     const signer = await provider.getSigner();
-    const address = signer.getAddress();
-    alert(address);
+    const addresses = await signer.getAddress();
+    alert(addresses[0]);
 }
 
 window.onload = ()=>{
