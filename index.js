@@ -12,7 +12,7 @@ async function myFunction2(){
     alert(addresses[0]);
 }
 
-window.onload = function {
+window.onload = async function() {
     myFunction();
     myFunction2();
 }
